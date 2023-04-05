@@ -1,0 +1,25 @@
+@mixin mobile {
+    @media screen and (max-width: 850px) {
+        @content;
+    }
+}
+
+.navigation {
+    width: 100%;
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem .5rem;
+    }
+    & a {
+        text-decoration: none;
+        color: #FFFFFF;
+        margin: 0 1rem;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        @include mobile {
+            margin: 5px 1rem;
+        }
+    }
+}

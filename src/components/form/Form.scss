@@ -1,0 +1,60 @@
+@mixin mobile {
+    @media screen and (max-width: 650px) {
+        @content;
+    }
+}
+
+.form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #0DBC91;
+    width: 500px;
+    height: 300px;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    @include mobile {
+        width: 300px;
+        height: 300px;
+    }
+    .closeBtn {
+        color: #FFFFFF;
+        border: none;
+        background: none;
+        align-self: flex-end;
+        font-size: 16px;
+        margin-right: 1rem;
+        cursor: pointer;
+    }
+    .formField {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 90%;
+        box-sizing: border-box;
+
+        .lable {
+            width: 100%;
+        }
+        .input{
+            width: 100%;
+            height: 50px;
+            border-radius: 6px;
+            border: none;
+            box-sizing: border-box;
+            margin-top: .5rem;
+            &:active, &:focus {
+                outline: none;
+            }
+        }
+    }
+    
+}

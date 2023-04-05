@@ -1,0 +1,64 @@
+@mixin mobile {
+    @media screen and (max-width: 850px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+.footer {
+    height: 144px;
+    width: 100%;
+    background-color: #08664F;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    @include mobile {
+        display: none;
+    }
+
+    .wrapper{
+        width: 70rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 0 1rem 0;
+        box-sizing: border-box;
+        transition: width 2s;
+        @include tablet {
+            width: 50rem;
+        }
+
+        .logo {
+            color:  #FFFFFF;
+            font-weight: 700;
+            margin: 0 1rem;
+            font-size: 32px;
+        }
+
+        .navWrapper {
+            text-align: center;
+        }
+
+        .socialBtns {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            .socialBtn {
+                background: none;
+                border: none;
+                cursor: pointer;
+                .socialIcon {
+                    width: 35px;
+                }
+            }
+        }
+    }
+    
+}

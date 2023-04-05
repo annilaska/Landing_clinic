@@ -1,0 +1,219 @@
+@mixin mobile {
+    @media screen and (max-width: 850px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+.main {
+    width: 100%;
+    text-align: center;
+    &__section-top {
+        height: 533px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #F8FBFA;
+        position: relative;
+        transition: background-color 2s, align-items 2s;
+        
+        @include mobile {
+            background: none;
+            align-items: start;
+        }
+        .blockContent {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: start;
+            width: 70rem;
+            transition: width 2s, flex-direction 2s;
+            @include tablet {
+                width: 50rem;
+            }
+            @include mobile {
+                flex-direction: column;
+            }
+            .mobileImageWrapper {
+                width: 100%;
+                background-image: url(../../assets/mobileBackground.png);
+                background-size: cover;
+                height: 288px;
+                display: none;
+                @include mobile {
+                    display: block;
+                }
+                
+            }
+            .text {
+                width: 22rem;
+                position: relative;
+                z-index: 3;
+                text-align: start;
+                @include mobile {
+                    width: 100%;
+                    padding: 34px 1rem;
+                    box-sizing: border-box;
+                }
+                .h1 {
+                    font-weight: 700;
+                    font-size: 36px;
+                    line-height: 47px;
+                    margin: 0;
+                    transition: font-weight 1s, font-size 1s, width 1s;
+                    @include mobile {
+                        font-weight: 700;
+                        font-size: 26px;
+                        line-height: 34px;
+                        margin: 0;
+                        width: 75%;
+                    }
+                }
+                .h3 {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin: 14px 0;
+                    transition: width 2s;
+                    @include mobile {
+                        width: 90%;
+                    }
+                }
+            }
+            .rectangle {
+                position: absolute;
+                z-index: 0;
+                right: 0;
+                @include mobile {
+                    display: none;
+                }
+            }
+            .overlay {
+                position: absolute;
+                z-index: 1;
+                right: 0;
+                background-color: #F8FBFA;
+                height: 533px;
+                width: 100%;
+                opacity: 0.7;
+                visibility: hidden;
+                transition: visibility 2s, display 2s;
+                @include tablet {
+                    visibility: visible;
+                }
+                @include mobile {
+                    display: none;
+                }
+            }
+        }
+   }
+
+   &__section-bottom {
+        height: 65vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 0;
+        flex-direction: column;
+        @include mobile {
+            display: none;
+        }
+        .textContent {
+            background-image: url(../../assets/background.png);
+            width: 70rem;
+            height: 440px;
+            padding: 1rem 1rem 1rem 3rem;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            
+            @include tablet {
+                width: 50rem;
+            }
+            .bottom_text {
+                text-align: start;
+                .title {
+                    font-weight: 700;
+                    font-size: 38px;
+                    line-height: 49px;
+                    text-transform: uppercase;
+                    margin: 0;
+                }
+                .h2 {
+                    font-weight: 400;
+                    font-size: 22px;
+                    line-height: 28px;
+                    margin: 0;
+                }
+                ul {
+                    margin: 16px 0 32px 0;
+                    padding: 0 1rem;
+                    box-sizing: border-box;
+                    .list {
+                        color: #1FA181;
+                        & span { 
+                            color: #364844;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 21px;
+                        }
+                    }
+                }
+                .price {
+                    display: flex;
+                    flex-direction: row;
+                    margin: 0 0 26px 0;
+                    .first {
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 26px;
+                    }
+                    .second {
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 24px;
+                        text-decoration-line: line-through;
+                        color: #868686;
+                        margin: 0 0 0 1rem;
+                    }
+                }
+            }
+        }
+        .arrows {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            margin: 34px 0 0 0;
+            @include mobile {
+                display: none;
+            }
+            .pageNumbers {
+                font-size: 18px;
+                line-height: 23px;
+                .counter {
+                    color:rgba(192, 192, 192, 1)
+                }
+            }
+            .arrowBtn {
+                background: none;
+                border: none;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                .rightArrow{
+                    transform: rotate(180deg);
+                }
+            }
+       }
+   }
+   
+}
