@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Landing_clinic/static/css/main.ddddb6cb.css",
+    "main.js": "/Landing_clinic/static/js/main.76282c99.js",
+    "static/media/Rectangle.png": "/Landing_clinic/static/media/Rectangle.da9953566a544191bff3.png",
+    "static/media/background.png": "/Landing_clinic/static/media/background.1a226b70148aed3fb403.png",
+    "static/media/mobileBackground.png": "/Landing_clinic/static/media/mobileBackground.fa2c21ed6e86f8280ed2.png",
+    "static/media/whatsappBtn.svg": "/Landing_clinic/static/media/whatsappBtn.0d1b6164c631eb775f9f0a5b9ce6dd56.svg",
+    "static/media/telegramBtn.svg": "/Landing_clinic/static/media/telegramBtn.3289ac314a5613449e4c88d417590add.svg",
+    "static/media/instagramBtn.svg": "/Landing_clinic/static/media/instagramBtn.000ad297abf8fc870bd6cb4479cb1c68.svg",
+    "static/media/whatsapp.svg": "/Landing_clinic/static/media/whatsapp.f9364dd77bdebd85d97d2af64f221432.svg",
+    "index.html": "/Landing_clinic/index.html",
+    "static/media/arrow.svg": "/Landing_clinic/static/media/arrow.5213a3d47e6ff848b449af94f0f0eb94.svg",
+    "static/media/placeholder.svg": "/Landing_clinic/static/media/placeholder.74c98bdfb8ec578718a571bb536ce2a0.svg",
+    "static/media/close.svg": "/Landing_clinic/static/media/close.b2cc621d085e9a8121aaf48c5b9c48c4.svg",
+    "static/media/menu.svg": "/Landing_clinic/static/media/menu.ec4ec4199dd561816fbb04eef0cd9920.svg",
+    "main.ddddb6cb.css.map": "/Landing_clinic/static/css/main.ddddb6cb.css.map",
+    "main.76282c99.js.map": "/Landing_clinic/static/js/main.76282c99.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ddddb6cb.css",
+    "static/js/main.76282c99.js"
+  ]
+}
